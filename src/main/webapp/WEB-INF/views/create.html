@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/save" th:object="${meo}" method="post" enctype="multipart/form-data">
+    <input type="hidden" th:field="*{id}">
+    <input type="text" th:field="*{name}">name
+    <input type="text" th:field="*{age}">age
+    <input type="file" th:field="*{image}">image
+    <button type="submit">create</button>
+</form>
+</body>
+</html>
