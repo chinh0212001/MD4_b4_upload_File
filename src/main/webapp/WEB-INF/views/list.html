@@ -7,19 +7,20 @@
 <body>
 <h1>hello girl</h1>
 <a href="/create">create meo</a>
-<table>
+<table border="1" style=" width: 100%">
     <tr>
         <th>STT</th>
         <th>NAME</th>
         <th>AGE</th>
         <th>IMAGE</th>
+        <th>UPLOAD</th>
     </tr>
     <tr th:each="list: ${listMeo}">
         <td th:text="${list.id}"> </td>
         <td th:text="${list.name}"></td>
         <td th:text="${list.age}"></td>
         <td th:text="${list.image}"></td>
-        <td><img th:src="@{'/anh/' + ${list.image}}" alt=""></td>
+        <td><img style="width: 200px" th:src="@{'/anh/' + ${list.image}}" alt=""></td>
     </tr>
 
 </table>
